@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response as IlluminateResponse;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Config;
 use Illuminate\View\View;
 use Aqayepardakht\Logger\FormatModel;
 use Aqayepardakht\Logger\IncomingEntry;
@@ -46,7 +47,7 @@ class RequestWatcher extends Watcher
 
         Telescope::recordRequest(IncomingEntry::make([
             'ip_address' => $event->request->ip(),
-            'uri' => str_replace($event->request->root(), '', $event->request->fullUrl()) ?: '/',
+            'uri' => Config::get('telescope.service').str_replace($event->request->root(), '', $event->request->fullUrl()) ?: '/',
             'method' => $event->request->method(),
             'controller_action' => optional($event->request->route())->getActionName(),
             'middleware' => array_values(optional($event->request->route())->gatherMiddleware() ?? []),
