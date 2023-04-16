@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'url' => "http://127.0.0.1:3000/api/log/store",
+    'url' => "https://log.aqayepardakht.ir/logger/api/store",
 
     'path' => env('TELESCOPE_PATH', 'telescope'),
 
