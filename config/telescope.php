@@ -5,6 +5,7 @@ use Aqayepardakht\Logger\Watchers;
 
 return [
 
+    'service' => '',
     /*
     |--------------------------------------------------------------------------
     | Telescope Domain
