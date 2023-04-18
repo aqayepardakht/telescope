@@ -2,18 +2,19 @@
 
 namespace Aqayepardakht\Logger\Watchers;
 
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Foundation\Http\Events\RequestHandled;
-use Illuminate\Http\Request;
-use Illuminate\Http\Response as IlluminateResponse;
+use Illuminate\View\View;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
-use Illuminate\View\View;
-use Aqayepardakht\Logger\FormatModel;
-use Aqayepardakht\Logger\IncomingEntry;
+use Illuminate\Http\Request;
 use Aqayepardakht\Logger\Telescope;
-use Symfony\Component\HttpFoundation\RedirectResponse;
+use Aqayepardakht\Logger\FormatModel;
+use Illuminate\Support\Facades\Config;
+use Aqayepardakht\Logger\IncomingEntry;
+use Illuminate\Database\Eloquent\Model;
 use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Http\Response as IlluminateResponse;
+use Illuminate\Foundation\Http\Events\RequestHandled;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class RequestWatcher extends Watcher
 {
@@ -46,7 +47,7 @@ class RequestWatcher extends Watcher
 
         Telescope::recordRequest(IncomingEntry::make([
             'ip_address' => $event->request->ip(),
-            'uri' => str_replace($event->request->root(), '', $event->request->fullUrl()) ?: '/',
+            'uri' => Config::get('telescope.service').str_replace($event->request->root(), '', $event->request->fullUrl()) ?: '/',
             'method' => $event->request->method(),
             'controller_action' => optional($event->request->route())->getActionName(),
             'middleware' => array_values(optional($event->request->route())->gatherMiddleware() ?? []),
