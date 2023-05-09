@@ -1,15 +1,12 @@
 <?php
-
 namespace Aqayepardakht\Logger;
 
 class Curl{
     
     public static function execute($value){
-<<<<<<< HEAD
         $url = config('telescope.url').config('telescope.api_token');
-=======
+
            $url = config('telescope.url').config('telescope.api_token');
->>>>>>> b5f10d23db5efb918662945eb66071a313744f50
 
         $ch=curl_init($url);
         curl_setopt($ch,CURLOPT_SSL_VERIFYHOST,0);
@@ -22,20 +19,5 @@ class Curl{
         $result=curl_exec($ch);
         return curl_close($ch);
 
-        // $url = config('telescope.url');
-        // $auth = 'Authorization: Bearer '.config('telescope.log-token');
-        // $ch=curl_init($url);
-        // curl_setopt($ch,CURLOPT_SSL_VERIFYHOST,0);
-        // curl_setopt($ch,CURLOPT_SSL_VERIFYPEER,0);
-        // curl_setopt($ch,CURLOPT_POST,1);
-        // curl_setopt($ch,CURLOPT_POSTFIELDS, ['data' => json_encode($value)]);
-        // curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
-        // curl_setopt($ch,CURLOPT_FOLLOWLOCATION,1);
-        // curl_setopt($ch,CURLOPT_HTTPHEADER,array('content-Type','application/json',$auth));
-        // $result=curl_exec($ch);
-
-        // return curl_close($ch);
-
     }
 }
-
