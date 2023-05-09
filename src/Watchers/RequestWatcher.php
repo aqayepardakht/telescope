@@ -5,7 +5,14 @@ namespace Aqayepardakht\Logger\Watchers;
 use Illuminate\View\View;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
+<<<<<<< HEAD
 use Illuminate\Http\Request;
+=======
+use Illuminate\Support\Facades\Config;
+use Illuminate\View\View;
+use Aqayepardakht\Logger\FormatModel;
+use Aqayepardakht\Logger\IncomingEntry;
+>>>>>>> b5f10d23db5efb918662945eb66071a313744f50
 use Aqayepardakht\Logger\Telescope;
 use Aqayepardakht\Logger\FormatModel;
 use Illuminate\Support\Facades\Config;

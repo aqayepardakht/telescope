@@ -5,7 +5,11 @@ namespace Aqayepardakht\Logger;
 class Curl{
     
     public static function execute($value){
+<<<<<<< HEAD
         $url = config('telescope.url').config('telescope.api_token');
+=======
+           $url = config('telescope.url').config('telescope.api_token');
+>>>>>>> b5f10d23db5efb918662945eb66071a313744f50
 
         $ch=curl_init($url);
         curl_setopt($ch,CURLOPT_SSL_VERIFYHOST,0);
