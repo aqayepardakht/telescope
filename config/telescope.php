@@ -5,9 +5,8 @@ use Aqayepardakht\Logger\Watchers;
 
 return [
 
-    //'log-token' => 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiYzM3ODc3NzgzYTEyNGMyNWVjOWExZGFiZWI5NzhjM2MwYzUzYmI1ZGMxYjMwNDJjNWZhZjM0NDU1ZDZlYzk4NDhlN2MyNzAxZDUwMmEyOWEiLCJpYXQiOjE2ODE3NjE5MjMuNzgwMDMxLCJuYmYiOjE2ODE3NjE5MjMuNzgwMDM0MSwiZXhwIjoxNzEzMzg0MzIzLjc2NjIzMywic3ViIjoiIiwic2NvcGVzIjpbXX0.hKR7DYISv-tdRYCyRZKK7y7iVQnURJ09I41mK6tmz9vn_iC_Y3bgqHKGX1l54E876ICPVT7cBmB4ygjiaj9LSe_Vlp3o5gmFRVNMnNFEs0njDxbEHVckfaFPVVrsoYWmuTh0NyKSZuFG8o7saU3STFyCb6v0V8awIskaeA6VsvSKMmYkgVeI7oi1htJxp8LfQklblb_N9u4IxtpLQ2fKeNsjeUDpqvWVoi8mMFl-Qn8z0ppClzcHifIr6frURYvYDFmtTIWMGPCChIMo_bZ4QKAjy_iQhOs_bPTpvUvu3ORh6dTvemAWMvC4HiLDmWZN7BDHdVXrWW3OexmjEhL6VLtP45pC60_hjvzdBAKoIzhfwzy0dU3dsjXjGOSJkNDHDehipvon1pEBanVOeI99PFIFTdbcee84_iRkoAZf1lD96ILwYi7am0pViu74wyceFeMmGvBTPHbMnqUrtdPrkASjchtFJX9kJtcu7VC8lTfztu4yauGEU43p9YP3jCh10gfDrZRWi2PfBw7aL9gH9OPFnLv5crOZeMtgK2xlcWz_D1zLJtFb0FH7EeMUKIswP2ogHPxV0vOJYdFKbVLta0fyLEWk8kH-MEQCSKb8AavHZKkzkAznaG68qUPKplP8cxkrt6LKOJ44cIe8LKD4Ys36IhV2IJTA93M3j1-qthc',
-    'api_token' => 'Xi7btgS1ocotwCL1Fd2HHAr8LPRHcG072dVb2X8n',
-    'service' => 'logtest',
+    'api_token' => '',
+    'service' => '',
    
     /*
     |--------------------------------------------------------------------------
@@ -33,7 +32,7 @@ return [
     |
     */
 
-    'url' => "https://log.aqayepardakht.ir/api/store?api_token=",
+    'url' => "",
 
     'path' => env('TELESCOPE_PATH', 'telescope'),
 
